@@ -1,0 +1,144 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ivy Design Forge | One-page websites for local businesses</title>
+<meta name="description" content="Ivy Design Forge builds one-page websites for local businesses that don't have one. We make a free preview first.">
+<style>
+:root{--ivy:#16130f;--ivy2:#2a2119;--leaf:#4f8a5b;--cream:#f4ede2;--paper:#f8f3ea;--brass:#c8612a;--ink:#17201a;--mute:#5d665f}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
+body{font-family:"Helvetica Neue",Inter,Arial,sans-serif;color:var(--ink);background:var(--paper);line-height:1.6}
+.serif{font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif}
+a{color:inherit}.wrap{max-width:1200px;margin:0 auto;padding:0 32px}
+.eyebrow{font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--brass);font-weight:600}
+nav{position:sticky;top:0;z-index:9;background:rgba(22,19,15,.94);backdrop-filter:blur(8px);color:var(--cream)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:68px}
+.logo{display:flex;align-items:center;gap:10px;font-size:21px;text-decoration:none}
+.logo svg{width:26px;height:26px}
+nav ul{display:flex;gap:30px;list-style:none;font-size:14px}nav ul a{text-decoration:none;opacity:.85}nav ul a:hover{opacity:1;color:#f0a35e}
+.btn{display:inline-block;background:var(--brass);color:#fff;text-decoration:none;padding:15px 28px;border-radius:999px;font-weight:600;font-size:15px;transition:transform .25s,background .25s}
+.btn:hover{transform:translateY(-2px);background:#a94f20}.btn.sm{padding:10px 20px;font-size:13px}
+.ghost{color:var(--cream);text-decoration:none;border-bottom:1px solid rgba(246,241,230,.4);padding-bottom:2px;font-size:15px}
+header.hero{background:radial-gradient(1200px 600px at 85% 20%,#3a2414 0,var(--ivy) 60%);color:var(--cream);position:relative;overflow:hidden;padding:120px 0 140px}
+.hero h1{font-size:clamp(44px,7.4vw,104px);line-height:.98;font-weight:400;letter-spacing:-.02em;max-width:900px;margin:22px 0 30px}
+.hero h1 em{color:#f0a35e;font-style:italic}
+.hero p.lead{font-size:20px;max-width:560px;opacity:.85;margin-bottom:40px}
+.hero .ctas{display:flex;gap:28px;align-items:center;flex-wrap:wrap}
+.vine{position:absolute;right:-40px;top:40px;width:520px;opacity:.9;pointer-events:none}
+.vine .lf{transform-origin:center;animation:sway 6s ease-in-out infinite}
+.vine .lf:nth-child(2n){animation-delay:-2s}.vine .lf:nth-child(3n){animation-delay:-4s}
+@keyframes sway{50%{transform:rotate(6deg)}}.vine .sp circle{animation:spark 2.4s ease-out infinite}.vine .sp circle:nth-child(2){animation-delay:.6s}.vine .sp circle:nth-child(3){animation-delay:1.2s}.vine .sp circle:nth-child(4){animation-delay:1.8s}@keyframes spark{to{transform:translateY(-120px);opacity:0}}.glow{animation:gl 4s ease-in-out infinite}@keyframes gl{50%{opacity:.6}}
+.rise{animation:rise .9s cubic-bezier(.2,.7,.2,1) both}.d1{animation-delay:.12s}.d2{animation-delay:.24s}.d3{animation-delay:.36s}
+@keyframes rise{from{transform:translateY(18px)}}
+.marquee{background:var(--brass);color:var(--ivy);overflow:hidden;white-space:nowrap;font-size:15px;padding:14px 0;font-weight:600;letter-spacing:.04em}
+.marquee span{display:inline-block;animation:mq 30s linear infinite}@keyframes mq{to{transform:translateX(-50%)}}
+section{padding:120px 0}
+h2{font-size:clamp(34px,4.6vw,60px);font-weight:400;line-height:1.05;letter-spacing:-.015em;margin:14px 0 22px}
+.intro{display:grid;grid-template-columns:1fr 1.3fr;gap:80px;align-items:end}
+.intro p{font-size:19px;color:var(--mute)}
+.work-head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:56px}
+.work-head p{max-width:400px;color:var(--mute)}
+.grid{display:grid;grid-template-columns:repeat(6,1fr);gap:28px}
+.card{grid-column:span 2;text-decoration:none}.card.big{grid-column:span 3}
+.frame{background:#e6dccd;border-radius:14px;padding:10px 10px 0;box-shadow:0 30px 60px -30px rgba(22,19,15,.45);transition:transform .45s}
+.frame .bar{height:18px;display:flex;gap:6px;align-items:center;padding-left:4px}.frame .bar i{width:8px;height:8px;border-radius:50%;background:#c9bfa9}
+.frame .shot{height:300px;overflow:hidden;border-radius:6px 6px 0 0}.big .frame .shot{height:400px}
+.frame img{width:100%;display:block;transition:transform 4s ease}
+.card:hover .frame{transform:translateY(-6px)}.card:hover img{transform:translateY(-30%)}
+.meta{display:flex;justify-content:space-between;margin-top:16px;font-size:14px}.meta b{font-size:18px;font-weight:400}.meta span{color:var(--mute)}
+.tag{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--brass);font-weight:700}
+.note{margin-top:30px;font-size:13px;color:var(--mute)}
+.process{background:var(--ivy);color:var(--cream)}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:60px;border-top:1px solid rgba(246,241,230,.2)}
+.step{padding:40px 36px 10px 0}.step+.step{padding-left:36px;border-left:1px solid rgba(246,241,230,.2)}
+.step .n{font-size:64px;color:#f0a35e;line-height:1}.step h3{font-size:24px;font-weight:400;margin:18px 0 10px}.step p{opacity:.75}
+.price{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.pcard{background:var(--cream);border:1px solid #e2d8c2;border-radius:24px;padding:52px;position:relative}
+.pcard .amt{font-size:84px;line-height:1;color:var(--ivy)}.pcard .amt small{font-size:22px;color:var(--mute)}
+.pcard .plus{font-size:30px;color:var(--ivy2);margin:10px 0 28px}
+.pcard ul{list-style:none;border-top:1px solid #e2d8c2;padding-top:22px}.pcard li{padding:8px 0 8px 28px;position:relative}
+.pcard li:before{content:"";position:absolute;left:0;top:15px;width:14px;height:8px;border-radius:0 100% 0 100%;background:var(--leaf)}
+.faq details{border-bottom:1px solid #ddd3bf;padding:26px 0}.faq summary{cursor:pointer;list-style:none;font-size:22px;display:flex;justify-content:space-between}
+.faq summary::-webkit-details-marker{display:none}.faq summary:after{content:"+";color:var(--brass);transition:transform .3s}.faq details[open] summary:after{transform:rotate(45deg)}
+.faq details p{color:var(--mute);margin-top:12px;max-width:720px}
+.cta{background:radial-gradient(900px 500px at 20% 0,#3a2414,var(--ivy));color:var(--cream);text-align:center;padding:140px 0}
+.cta h2{font-size:clamp(40px,6vw,84px)}.cta .mail{display:block;font-size:clamp(22px,3vw,36px);color:#f0a35e;margin:10px 0 40px;text-decoration:none}
+footer{background:#0d0b08;color:rgba(246,241,230,.7);font-size:14px;padding:50px 0}
+footer .wrap{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap}.small{font-size:12px;opacity:.75}
+footer .fr{text-align:right}@media(max-width:900px){footer .fr{text-align:left}nav ul{display:none}.vine{width:300px;right:-90px;top:auto;bottom:-40px;opacity:.35}
+.intro,.price{grid-template-columns:1fr;gap:36px}.work-head{flex-direction:column;align-items:start}
+.card,.card.big{grid-column:span 6}.frame .shot,.big .frame .shot{height:320px}
+.steps{grid-template-columns:1fr}.step,.step+.step{padding:30px 0;border-left:0;border-bottom:1px solid rgba(246,241,230,.2)}
+section{padding:80px 0}header.hero{padding:80px 0 100px}.pcard{padding:34px}.wrap{padding:0 22px}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style></head><body>
+<nav><div class="wrap"><a class="logo serif" href="#"><svg viewBox="0 0 24 24"><path d="M3 9h14c0 3-2 4-5 4v3h3v3H6v-3h3v-3C6 13 4 12 3 9z" fill="#f0a35e"/><path d="M17 9c1-4 4-5 5-5-0 3-2 5-5 5z" fill="#4f8a5b"/></svg>Ivy Design Forge</a>
+<ul><li><a href="#work">Work</a></li><li><a href="#process">Process</a></li><li><a href="#pricing">Pricing</a></li><li><a href="#faq">FAQ</a></li></ul>
+<a class="btn sm" href="mailto:keith@ivydesignforge.com">Email Keith</a></div></nav>
+
+<header class="hero"><div class="wrap">
+<div class="eyebrow rise">Web design forge · Pierre, South Dakota</div>
+<h1 class="serif rise d1">Your business deserves to be <em>found.</em></h1>
+<p class="lead rise d2">We build one-page websites for local businesses that don't have one yet. And we make you a free preview first, so you see it before you pay a cent.</p>
+<div class="ctas rise d3"><a class="btn" href="mailto:keith@ivydesignforge.com?subject=Free%20preview%20request">Ask for your free preview</a><a class="ghost" href="#work">See sample previews ↓</a></div>
+</div>
+<svg class="vine" viewBox="0 0 400 520" fill="none" aria-hidden="true"><defs><radialGradient id="g"><stop offset="0" stop-color="#ff9a4a" stop-opacity=".55"/><stop offset="1" stop-color="#ff9a4a" stop-opacity="0"/></radialGradient></defs>
+<circle cx="230" cy="330" r="200" fill="url(#g)" class="glow"/>
+<path d="M90 300h230c0 50-40 70-90 70v50h50v40H130v-40h50v-50c-50 0-90-20-90-70z" fill="#0d0b08" stroke="#c8612a" stroke-width="2"/>
+<path d="M330 300c10-70 50-100 70-110" stroke="#4f8a5b" stroke-width="3"/>
+<g class="lf"><path d="M355 240c-30-20-60-5-62 20 30 10 55 0 62-20z" fill="#4f8a5b"/></g>
+<g class="lf"><path d="M380 205c10-35 40-45 55-35-10 30-35 42-55 35z" fill="#6aa676"/></g>
+<g class="sp"><circle cx="200" cy="270" r="3" fill="#ffb36b"/><circle cx="240" cy="250" r="2" fill="#ffd08f"/><circle cx="170" cy="240" r="2.5" fill="#ff8a3d"/><circle cx="260" cy="215" r="2" fill="#ffb36b"/></g></svg>
+</header>
+<div class="marquee" aria-hidden="true"><span>Restaurants ✦ Butcher shops ✦ Lawn care ✦ Cleaning ✦ Handyman ✦ Consignment ✦ Restaurants ✦ Butcher shops ✦ Lawn care ✦ Cleaning ✦ Handyman ✦ Consignment ✦ Restaurants ✦ Butcher shops ✦ Lawn care ✦ Cleaning ✦ Handyman ✦ Consignment ✦ Restaurants ✦ Butcher shops ✦ Lawn care ✦ Cleaning ✦ Handyman ✦ Consignment ✦ </span></div>
+
+<section><div class="wrap intro">
+<div><div class="eyebrow">The studio</div><h2 class="serif">No template. Each site forged for its trade.</h2></div>
+<p>Ivy Design Forge is run by Keith Ivy in Pierre, SD. Every site is designed around the kind of business it's for: a diner reads like a diner, a butcher shop feels like a butcher shop. One page, built to help customers find you, call you and come in.</p>
+</div></section>
+
+<section id="work" style="padding-top:0"><div class="wrap">
+<div class="work-head"><div><div class="eyebrow">Selected work</div><h2 class="serif">Sample previews</h2></div><p>Concept previews we designed for local businesses. Each one has its own look, researched from the best sites in that industry.</p></div>
+<div class="grid">
+<a class="card big"><div class="frame"><div class="bar"><i></i><i></i><i></i></div><div class="shot"><img src="img/egg-mann-and-earl.png" alt="Sample preview for Egg Mann and Earl"></div></div><div class="meta"><div><div class="tag">01 · Sample preview</div><b class="serif">Egg Mann &amp; Earl</b></div><span>Restaurant</span></div></a>
+<a class="card big"><div class="frame"><div class="bar"><i></i><i></i><i></i></div><div class="shot"><img src="img/maier-meats-the-hangout.png" alt="Sample preview for Maier Meats"></div></div><div class="meta"><div><div class="tag">02 · Sample preview</div><b class="serif">Maier Meats</b></div><span>Butcher shop</span></div></a>
+<a class="card"><div class="frame"><div class="bar"><i></i><i></i><i></i></div><div class="shot"><img src="img/j-f-lawn-care-landscaping-llc.png" alt="Sample preview for J&amp;F Lawn Care"></div></div><div class="meta"><div><div class="tag">03 · Sample preview</div><b class="serif">J&amp;F Lawn Care</b></div><span>Landscaping</span></div></a>
+<a class="card"><div class="frame"><div class="bar"><i></i><i></i><i></i></div><div class="shot"><img src="img/pure-elegance-daily.png" alt="Sample preview for Pure Elegance"></div></div><div class="meta"><div><div class="tag">04 · Sample preview</div><b class="serif">Pure Elegance</b></div><span>Cleaning</span></div></a>
+<a class="card"><div class="frame"><div class="bar"><i></i><i></i><i></i></div><div class="shot"><img src="img/a-fern-handyman-services.png" alt="Sample preview for A Fern Handyman"></div></div><div class="meta"><div><div class="tag">05 · Sample preview</div><b class="serif">A Fern Handyman</b></div><span>Handyman</span></div></a>
+<a class="card big" style="grid-column:2/span 4"><div class="frame"><div class="bar"><i></i><i></i><i></i></div><div class="shot"><img src="img/sweetpea-s-consignment-shop.png" alt="Sample preview for Sweetpea's Consignment"></div></div><div class="meta"><div><div class="tag">06 · Sample preview</div><b class="serif">Sweetpea's Consignment</b></div><span>Retail</span></div></a>
+</div>
+<p class="note">These are concept previews, not paid client sites. Photos in them are generated sample photos.</p>
+</div></section>
+
+<section id="process" class="process"><div class="wrap">
+<div class="eyebrow">How it works</div><h2 class="serif">Three steps. No risk.</h2>
+<div class="steps">
+<div class="step"><div class="n serif">01</div><h3 class="serif">We build your preview</h3><p>We design a one-page site for your business, free, before you commit to anything.</p></div>
+<div class="step"><div class="n serif">02</div><h3 class="serif">You take a look</h3><p>Open the link, see your business online, and tell us what you think.</p></div>
+<div class="step"><div class="n serif">03</div><h3 class="serif">We take it live</h3><p>If you like it, we set it up for $300 and keep it running for $25 a month.</p></div>
+</div></div></section>
+
+<section id="pricing"><div class="wrap price">
+<div><div class="eyebrow">Pricing</div><h2 class="serif">One simple price. Out in the open.</h2><p style="color:var(--mute);font-size:18px">The preview is free. You only pay if you want the site.</p></div>
+<div class="pcard"><div class="tag">One-page website</div>
+<div class="amt serif">$300 <small>setup</small></div><div class="plus serif">+ $25 / month</div>
+<ul><li>Free preview first</li><li>A design made for your type of business</li><li>One page, built for local customers</li><li>No contracts, cancel any time.<!-- UNCONFIRMED --></li></ul>
+<a class="btn" style="margin-top:30px" href="mailto:keith@ivydesignforge.com?subject=Free%20preview%20request">Get my free preview</a><p style="margin-top:18px;font-size:13px;color:var(--mute)">Need more pages (menu, gallery, services)? Just ask for a quote.</p></div>
+</div></section>
+
+<section id="faq" class="faq" style="padding-top:0"><div class="wrap">
+<div class="eyebrow">Questions</div><h2 class="serif">Good to know</h2>
+<details open><summary class="serif">Is the preview really free?</summary><p>Yes. We make the preview first so you can see it before deciding anything.</p></details>
+<details><summary class="serif">What does it cost if I want it?</summary><p>$300 to set it up, then $25 a month.</p></details>
+<details><summary class="serif">Who builds my site?</summary><p>Ivy Design Forge, run by Keith Ivy in Pierre, South Dakota.</p></details>
+<details><summary class="serif">How do I get started?</summary><p>Email keith@ivydesignforge.com with your business name, and we'll take it from there.</p></details>
+</div></section>
+
+<section class="cta"><div class="wrap">
+<div class="eyebrow">Hammered out by hand</div><h2 class="serif">Ready to see your business online?</h2>
+<a class="mail serif" href="mailto:keith@ivydesignforge.com">keith@ivydesignforge.com</a>
+<a class="btn" href="mailto:keith@ivydesignforge.com?subject=Free%20preview%20request">Email for a free preview</a>
+</div></section>
+
+<footer><div class="wrap">
+<div><div class="serif" style="font-size:20px;color:var(--cream)">Ivy Design Forge</div>131 Lakeview Drive, Pierre, SD 57501</div>
+<div class="fr"><a href="mailto:keith@ivydesignforge.com">keith@ivydesignforge.com</a><div class="small">Text or call: <a href="sms:+16052225621">(605) 222-5621</a></div><div class="small">© 2026 Ivy Design Forge</div></div>
+</div></footer>
+</body></html>
